@@ -1,0 +1,34 @@
+/* UMP THEME - Brand Colors & Variables */
+:root {
+  /* UMP Primary Navy Blue - Pantone 274 C */
+  --ump-navy: #323a85;
+  --ump-navy-rgb: 50, 58, 133;
+  --ump-navy-light: #4152a6;
+  --ump-navy-dark: #252a5c;
+  
+  /* UMP Gold - Original Accent Color */
+  --ump-gold: #ffd700;
+  --ump-gold-rgb: 255, 215, 0;
+  
+  /* UMP Green - Accent Color */
+  --ump-green: #2A9D8F;
+  --ump-green-rgb: 42, 157, 143;
+  
+  /* UMP Red - Accent Color */
+  --ump-red: #E63946;
+  --ump-red-rgb: 230, 57, 70;
+  
+  /* Secondary Yellow */
+  --ump-yellow: #FFD60A;
+  --ump-yellow-rgb: 255, 214, 10;
+  
+  /* Neutral Colors */
+  --ump-white: #ffffff;
+  --ump-gray-light: #f5f5f5;
+  --ump-gray: #e0e0e0;
+  --ump-gray-dark: #666666;
+  --ump-black: #333333;
+}
+
+/* Import UMP Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Brandon+Grotesque&display=swap');

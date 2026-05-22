@@ -1,0 +1,216 @@
+@import './ump-theme.css';
+
+.events-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  animation: ump-fadeIn 0.5s ease-out;
+}
+
+.events-title {
+  color: var(--ump-navy);
+  margin-bottom: 2rem;
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  border-bottom: 3px solid var(--ump-gold);
+  padding-bottom: 0.5rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.event-card {
+  padding: 1.5rem;
+  border: 1px solid var(--ump-gray);
+  border-radius: 8px;
+  background: white;
+  transition: all 0.3s;
+}
+
+.event-card:hover {
+  border-color: var(--ump-navy);
+  box-shadow: 0 5px 15px rgba(36, 39, 83, 0.1);
+  transform: translateY(-3px);
+}
+
+.event-card h3 {
+  color: var(--ump-navy);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+}
+
+.event-description {
+  color: var(--ump-black);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+.event-detail {
+  color: var(--ump-gray-dark);
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  font-family: Arial, sans-serif;
+}
+
+.event-detail strong {
+  color: var(--ump-navy);
+}
+
+.event-loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--ump-gray-dark);
+}@import './ump-theme.css';
+
+.events-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.events-title {
+  color: var(--ump-navy);
+  margin-bottom: 2rem;
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  border-bottom: 3px solid var(--ump-gold);
+  padding-bottom: 0.5rem;
+}
+
+.events-filter {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.events-filter label {
+  color: var(--ump-navy);
+  font-weight: 500;
+}
+
+.events-filter select {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--ump-gray);
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.events-filter select:focus {
+  outline: none;
+  border-color: var(--ump-navy);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.event-card {
+  background: white;
+  border: 1px solid var(--ump-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(36, 39, 83, 0.05);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(36, 39, 83, 0.1);
+  border-color: var(--ump-navy);
+}
+
+.event-type-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--ump-gold);
+  color: var(--ump-navy);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.event-card h3 {
+  color: var(--ump-navy);
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-right: 5rem;
+}
+
+.event-description {
+  color: var(--ump-black);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.event-details {
+  border-top: 1px solid var(--ump-gray);
+  padding-top: 1rem;
+}
+
+.event-detail {
+  color: var(--ump-gray-dark);
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.event-detail strong {
+  color: var(--ump-navy);
+}
+
+.no-events {
+  text-align: center;
+  padding: 3rem;
+  color: var(--ump-gray-dark);
+  font-style: italic;
+  grid-column: 1 / -1;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--ump-gray-dark);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .events-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .events-filter select {
+    width: 100%;
+  }
+}

@@ -1,0 +1,384 @@
+@import './ump-theme.css';
+
+/* ========== ADMIN LAYOUT ========== */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========== SIDEBAR ========== */
+.admin-sidebar {
+  width: 280px;
+  background: var(--ump-navy);
+  color: white;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.admin-sidebar.closed {
+  width: 80px;
+}
+
+.sidebar-header {
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.logo-text {
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.sidebar-toggle:hover {
+  opacity: 0.8;
+}
+
+/* ========== SIDEBAR MENU ========== */
+.sidebar-menu {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+}
+
+.sidebar-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+}
+
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+  white-space: nowrap;
+}
+
+.sidebar-menu-item:hover {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.sidebar-menu-item.active {
+  background: var(--ump-gold);
+  color: var(--ump-navy);
+  border-left-color: white;
+  font-weight: 600;
+}
+
+.menu-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.menu-label {
+  flex: 1;
+}
+
+/* ========== SIDEBAR FOOTER ========== */
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-version {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  margin: 0;
+}
+
+/* ========== MAIN CONTENT ========== */
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ========== TOP NAVIGATION ========== */
+.admin-topnav {
+  background: white;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-bottom: 2px solid var(--ump-gold);
+}
+
+.topnav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--ump-navy);
+}
+
+.topnav-title {
+  color: var(--ump-navy);
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.topnav-right {
+  display: flex;
+  align-items: center;
+}
+
+.topnav-admin {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-info {
+  text-align: right;
+}
+
+.admin-name {
+  font-weight: 600;
+  color: var(--ump-navy);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.admin-email {
+  font-size: 0.8rem;
+  color: #999;
+  margin: 0.2rem 0 0 0;
+}
+
+.admin-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--ump-gold);
+  color: var(--ump-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ========== PROFILE MENU ========== */
+.profile-menu {
+  position: relative;
+}
+
+.profile-menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--ump-navy);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.profile-menu-btn:hover {
+  opacity: 0.7;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 180px;
+  z-index: 200;
+  margin-top: 0.5rem;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--ump-navy);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background: #f5f5f5;
+  padding-left: 1.25rem;
+}
+
+.dropdown-item.logout {
+  color: #e74c3c;
+}
+
+.dropdown-item.logout:hover {
+  background: #ffe5e0;
+}
+
+/* ========== CONTENT AREA ========== */
+.admin-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.admin-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.admin-content::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.admin-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.admin-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .admin-sidebar.closed {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .topnav-title {
+    font-size: 1.4rem;
+  }
+
+  .admin-email {
+    display: none;
+  }
+
+  .admin-content {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-topnav {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .topnav-title {
+    font-size: 1.1rem;
+  }
+
+  .admin-info {
+    display: none;
+  }
+
+  .sidebar-header {
+    padding: 1rem;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+}

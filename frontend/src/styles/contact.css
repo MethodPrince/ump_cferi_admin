@@ -1,0 +1,136 @@
+@import './ump-theme.css';
+
+.contact-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  animation: ump-fadeIn 0.5s ease-out;
+}
+
+.contact-title {
+  color: var(--ump-navy);
+  margin-bottom: 2rem;
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  border-bottom: 3px solid var(--ump-gold);
+  padding-bottom: 0.5rem;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  padding: 2rem;
+  background: var(--ump-gray-light);
+  border-radius: 8px;
+  border: 1px solid var(--ump-gray);
+}
+
+.contact-info h3 {
+  color: var(--ump-navy);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+}
+
+.contact-info p {
+  margin: 1rem 0;
+  color: var(--ump-black);
+  font-family: Arial, sans-serif;
+}
+
+.contact-info strong {
+  color: var(--ump-navy);
+}
+
+.contact-form {
+  padding: 2rem;
+  border: 1px solid var(--ump-gray);
+  border-radius: 8px;
+  background: white;
+}
+
+.contact-form h3 {
+  color: var(--ump-navy);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+}
+
+.contact-form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--ump-gray);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: var(--ump-navy);
+  box-shadow: 0 0 0 3px rgba(36, 39, 83, 0.1);
+}
+
+.contact-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--ump-gray);
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s;
+}
+
+.contact-textarea:focus {
+  outline: none;
+  border-color: var(--ump-navy);
+  box-shadow: 0 0 0 3px rgba(36, 39, 83, 0.1);
+}
+
+.contact-button {
+  width: 100%;
+  padding: 12px;
+  background: var(--ump-navy);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-button:hover {
+  background: var(--ump-navy-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(36, 39, 83, 0.3);
+}
+
+.contact-success {
+  color: var(--ump-success);
+  margin-bottom: 1rem;
+  padding: 10px;
+  background: #d4edda;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+}

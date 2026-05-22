@@ -1,0 +1,19 @@
+{
+  "name": "ump-cferi-web",
+  "version": "1.0.0",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "install-deps": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ..",
+    "build": "npm install && cd frontend && npm install && npm run build && cd ../backend && npm install && cd ..",
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm start"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "mongodb": "^7.1.0"
+  }
+}
